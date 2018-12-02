@@ -14,7 +14,7 @@ import javax.persistence.Table;
  *
  * @author danie
  */
-@Table(name="userdetails")
+@Table(name="userDetails")
 @Entity
 public class usuari {
         /*Forma 1*/                 /*Forma 2*/    
@@ -46,6 +46,14 @@ public class usuari {
 
     public void setCognom(String cognom) {
         this.cognom = cognom;
+    }
+    
+    public int getEdat() {
+        return edat;
+    }
+
+    public void setEdat(int edat) {
+        this.edat = edat;
     }
 }
 

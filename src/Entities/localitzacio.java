@@ -14,14 +14,15 @@ import javax.persistence.Table;
  *
  * @author danie
  */
-@Table(name="userdetails")
+@Table(name="localization")
 @Entity
-public class localització {
+public class localitzacio {
         /*Forma 1*/                 /*Forma 2*/    
     @Id                         
     private int id;
-    @Column(name="name")        private String nombre;
-    @Column(name="lastname")    private String apellido;
+    @Column(name="city")        private String ciutat;
+    @Column(name="address")    private String adreça;
+    @Column(name="country")    private String pais;
     
     public int getId() {
         return id;
@@ -31,20 +32,28 @@ public class localització {
         this.id = id;
     }
 
-    public String getNombre() {
-        return nombre;
+    public String getCiutat() {
+        return ciutat;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public void setCiutat(String ciutat) {
+        this.ciutat = ciutat;
     }
 
-    public String getApellido() {
-        return apellido;
+    public String getAdreça() {
+        return adreça;
     }
 
-    public void setApellido(String apellido) {
-        this.apellido = apellido;
+    public void setAdreça(String adreça) {
+        this.adreça = adreça;
+    }
+    
+    public String getPais() {
+        return pais;
+    }
+
+    public void setPais(String pais) {
+        this.pais = pais;
     }
 }
 

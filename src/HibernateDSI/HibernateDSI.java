@@ -24,21 +24,25 @@ public class HibernateDSI {
         usuari1.setNom("Daniel");
         usuari1.setCognom("Perez");
         usuari1.setId(0);
+        usuari1.setEdat(43);
         
         usuari usuari2 = new usuari();
         usuari2.setNom("Manel-Alex");
         usuari2.setCognom("Garcia"); 
         usuari2.setId(1);
+        usuari2.setEdat(150);
         
         usuari usuari3 = new usuari();
         usuari3.setNom("Eloi");
         usuari3.setCognom("Roca");
         usuari3.setId(2);
+        usuari3.setEdat(23);
         
         usuari usuari4 = new usuari();
         usuari4.setNom("Albert");
         usuari4.setCognom("Ribera");
         usuari4.setId(3);
+        usuari4.setEdat(19);
         
         Session session = hibernateUtil.getSessionFactory().getCurrentSession();
         

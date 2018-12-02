@@ -14,14 +14,14 @@ import javax.persistence.Table;
  *
  * @author danie
  */
-@Table(name="userdetails")
+@Table(name="residence")
 @Entity
 public class residencia {
         /*Forma 1*/                 /*Forma 2*/    
-    @Id                         
-    private int id;
-    @Column(name="name")        private String nombre;
-    @Column(name="lastname")    private String apellido;
+    @Id                         private int id;
+    @Column(name="type")        private String tipus;
+    @Column(name="m2")    private int m2;
+    @Column(name="rooms")    private int habitacions;
     
     public int getId() {
         return id;
@@ -31,20 +31,28 @@ public class residencia {
         this.id = id;
     }
 
-    public String getNombre() {
-        return nombre;
+    public String getTipus() {
+        return tipus;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public void setTipus(String tipus) {
+        this.tipus = tipus;
     }
 
-    public String getApellido() {
-        return apellido;
+    public int getM2() {
+        return m2;
     }
 
-    public void setApellido(String apellido) {
-        this.apellido = apellido;
+    public void setM2(int m2) {
+        this.m2 = m2;
+    }
+    
+    public int getHabitacions() {
+        return habitacions;
+    }
+
+    public void setHabitacions(int habitacions) {
+        this.habitacions = habitacions;
     }
 }
 
