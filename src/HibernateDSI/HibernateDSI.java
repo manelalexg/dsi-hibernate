@@ -5,7 +5,7 @@
  */
 package HibernateDSI;
 
-import Entities.detalleUsuario;
+import Entities.usuari;
 import org.hibernate.Session;
 
 /**
@@ -20,34 +20,34 @@ public class HibernateDSI {
     public static void main(String[] args) {
         // TODO code application logic here
         
-        detalleUsuario usuario1 = new detalleUsuario();
-        usuario1.setNombre("Daniel");
-        usuario1.setApellido("Perez");
-        usuario1.setId(0);
+        usuari usuari1 = new usuari();
+        usuari1.setNom("Daniel");
+        usuari1.setCognom("Perez");
+        usuari1.setId(0);
         
-        detalleUsuario usuario2 = new detalleUsuario();
-        usuario2.setNombre("Manel-Alex");
-        usuario2.setApellido("Garcia"); 
-        usuario2.setId(1);
+        usuari usuari2 = new usuari();
+        usuari2.setNom("Manel-Alex");
+        usuari2.setCognom("Garcia"); 
+        usuari2.setId(1);
         
-        detalleUsuario usuario3 = new detalleUsuario();
-        usuario3.setNombre("Eloi");
-        usuario3.setApellido("Roca");
-        usuario3.setId(2);
+        usuari usuari3 = new usuari();
+        usuari3.setNom("Eloi");
+        usuari3.setCognom("Roca");
+        usuari3.setId(2);
         
-        detalleUsuario usuario4 = new detalleUsuario();
-        usuario4.setNombre("Albert");
-        usuario4.setApellido("Ribera"); 
-        usuario4.setId(3);
+        usuari usuari4 = new usuari();
+        usuari4.setNom("Albert");
+        usuari4.setCognom("Ribera");
+        usuari4.setId(3);
         
         Session session = hibernateUtil.getSessionFactory().getCurrentSession();
         
         session.beginTransaction();
         
-        session.save(usuario1);
-        session.save(usuario2);
-        session.save(usuario3);
-        session.save(usuario4);
+        session.save(usuari1);
+        session.save(usuari2);
+        session.save(usuari3);
+        session.save(usuari4);
         
         session.getTransaction().commit();
         /*

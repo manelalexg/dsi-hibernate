@@ -14,14 +14,15 @@ import javax.persistence.Table;
  *
  * @author danie
  */
-@Table(name="userdatails")
+@Table(name="userdetails")
 @Entity
-public class detalleUsuario {
+public class usuari {
         /*Forma 1*/                 /*Forma 2*/    
-    @Id                         
-    private int id;
-    @Column(name="name")        private String nombre;
-    @Column(name="lastname")    private String apellido;
+    @Id                         private int id;
+    @Column(name="name")        private String nom;
+    @Column(name="lastname")    private String cognom;
+    @Column(name="age")         private int edat;
+    
     
     public int getId() {
         return id;
@@ -31,20 +32,20 @@ public class detalleUsuario {
         this.id = id;
     }
 
-    public String getNombre() {
-        return nombre;
+    public String getNom() {
+        return nom;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public void setNom(String nom) {
+        this.nom = nom;
     }
 
-    public String getApellido() {
-        return apellido;
+    public String getCognom() {
+        return cognom;
     }
 
-    public void setApellido(String apellido) {
-        this.apellido = apellido;
+    public void setCognom(String cognom) {
+        this.cognom = cognom;
     }
 }
 
